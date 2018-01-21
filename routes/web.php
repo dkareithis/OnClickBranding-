@@ -1,5 +1,5 @@
 <?php
-
+use DanielsEliteEngineering\About;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$prose = About::all();
+    return view('welcome',compact('prose'));
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('about','AboutController');
+Route::get('about.edit',['as'=>'about.edit','uses'=>'AboutController@edit']);
+Route::get('about.create',['as'=>'about.create','uses'=>'AboutController@create']);

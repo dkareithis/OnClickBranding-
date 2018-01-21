@@ -83,16 +83,16 @@
                 </div>
 
                 <div>
-                    @include('partials.about')
+                    @include('partials.about.index')
                 </div>
                 <div>
-                    @include('partials.services')
+                    @include('partials.services.index')
                 </div>
                 <div>
-                    @include('partials.portfolio')
+                    @include('partials.portfolio.index')
                 </div>
                 <div>
-                    @include('partials.contact')
+                    @include('partials.contact.index')
                 </div>
             </div>
         </div>
